@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <form action="index.html" class="login-form">
+        <h1>Login</h1>
+        <div class="txtwrap">
+        <input type="text" class="txt">
+        <span data-placeholder="Username"></span>
+        </div>
+        <div class="txtwrap">
+            <input type="password" class="txt" >
+            <span data-placeholder="Password"></span>
+        </div>
+        <input type="submit" value="Login" class="loginbt">
+        <div class="bottom-text">
+            <span>Don't have account?</span><a href="#"> Sign up </a>
+        </div>
+    </form>
+<script>
+let inputmanger=document.querySelectorAll(".txt");
+inputmanger.forEach(e=>{
+    e.addEventListener("focus",function(e)
+    {
+        let target=e.target;
+        if(target.value=="")
+        {
+            target.classList.add("focus");
+        }
+    });
+    e.addEventListener("blur",function(e)
+    {
+        let target=e.target;
+        if(target.value=="")
+        {
+            target.classList.remove("focus");
+        }
+    });
+});
+
+
+
+
+</script>
+</body>
+</html>
